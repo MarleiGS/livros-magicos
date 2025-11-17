@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo-1: #25344f;
+    --fundo-2: #617891;
+    --fundo-3: #f6e7d3;
+    --fundo-4: #632024;
+    --texto-1: #eceb9b;
+    --texto-2: #bbd1ea;
+    --texto-3: #66462e;
+    --texto-4: #eade97;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5em;
+    background-color: var(--texto-2);
+    color: var(--texto-3);
+}
+
+/*Configuração do Header*/
+header {
+    background-color: var(--fundo-1);
+    color: var(--texto-1);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: sticky;
+    top: 0;
+}
+
+header > h2{
+    text-align: center;
+    width: 160px;
+    height: 80px;
+    align-content: center;
+}
+
+.menu ul {
+    list-style: none; /*Retira o bullet do menu*/
+    display: flex; /*Texto fica um ao lado do outro*/
+    gap: 5px; /*Espaço entre o texto do menu*/
+}
+
+.menu li{
+    width: 100px;
+    align-content: center;
+    align-items: center;
+    text-align: center;   
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto-1);
+    font-weight: 600;
+    padding: 10px 10px; /*original 12px 15px*/
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--fundo-2);
+    color: var(--texto-2);
+}
+
+/*Botão Modo Escuro e Claro*/
+.menu1 ul {
+    list-style: none; /*Retira o bullet do menu*/
+    display: flex; /*Texto fica um ao lado do outro*/
+}
+
+.menu1 li{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu1 a {
+    text-decoration: none;
+    color: var(--texto-1);
+    font-weight: 600;
+    padding: 15px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu1 a:hover {
+    background-color: var(--fundo-2);
+    color: var(--texto-2);
+}
+
+/*Main*/
+main{
+    margin-top: 15px;
+}
+
+article{
+    background-color: var(--fundo-3);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    
+}
+
+article h2{
+    color: var(--texto-3);
+    margin-bottom: 10px;
+}
+
+article#historico{
+    min-width: 450px;
+    max-width: 950px;
+    margin: auto;
+}
+
+#missao{
+    min-width: 450px;
+    max-width: 950px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+#visao{    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.missaovv ul{
+    padding: 0 0 10px 50px;
+}
+
+#visao .missaovv{
+    background-color: var(--fundo-4);
+    color: var(--texto-4);
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 8px solid var(--texto-4);
+    transition: border-width 0.3s, border-color 0.5s;
+
+    
+}
+
+#visao .missaovv:hover{
+    border-left-width: 15px;
+    border-color: var(--fundo-2);
+}
+
+
+/*Equipe*/
+section#equipe {
+    background-color: var(--fundo-3);
+    padding: 10px;
+    border-radius: 8px;
+    
+    min-width: 800px;
+    max-width: 1000px;
+    margin: auto;
+
+    margin-bottom: 50px;
+
+}
+
+section#equipe h2 {
+    color: var(--destaque);
+    margin-bottom: 10px;
+
+}
+
+article#fotos {
+    border: 2px solid var(--fundo-4);
+    background-color: var(--fundo-4);
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+article#fotos div {
+    padding: 20px 0;
+    margin: 5px;
+    width: 330px;
+    text-align: center;
+    color: var(--texto-3);
+    background-color: var(--fundo-3);
+    border: 2px solid var(--texto-3);
+    border-radius: 10px;
+
+}
+
+article#fotos img {
+    width: 180px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid var(--fundo-3);
+    outline: 5px solid var(--texto-3);
+}
+
+article#fotos p {
+    font-size: .9em;
+}
+
+
+/*Footer: Configuração*/
+
+footer {
+    background-color: var(--fundo-1);
+    color: var(--texto-1);
+    height: 600px;
+    text-align: center;
+
+    line-height: 70px;
+
+    display: block;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--texto-inverso);
+}
+
+footer a:hover {
+    background-color: var(--fundo-2);
+    padding: 2px;
+    border-radius: 5px;
+    /*color: var(--texto-4);*/
+}
+
