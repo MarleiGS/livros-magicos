@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css-lmagicos.css">
+    <script src="script-lmagicos02.js" type="module" defer></script><!--Script JS API-->
+    <script src="xscript-lmagicos.js" type="module" defer></script><!--Script JS Voltar e Cabeçalho-->
+
+    <style>
+        form{
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        fieldset{
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        legend{
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        label{
+            display: inline-block;
+            width: 113px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"]{
+            width: calc(100% - 120px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"],
+        input[type="reset"]{
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="reset"]{
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Livros Mágicos</h2>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="../index.html#historico" class="link">Histórico</a></li>
+                <li><a href="../index.html#missao" class="link">Missão</a></li>
+                <li><a href="../index.html#produto" class="link">Produtos</a></li>
+                <li><a href="../index.html#equipe" class="link">Equipe</i></a></li>
+            </ul>
+        </nav>
+        <nav class="menu1">
+            <ul>
+                <li><a href="#" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Formulário -->
+    <form action="index.js" autocomplete="on"> 
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <!-- Nome -->
+            <p><label for="nome">Nome: </label>
+                <input type="text" id="nome"
+                required
+                placeholder="Digite seu nome">
+            </p>
+            <!-- Sobrenome -->
+            <p><label for="sobrenome">Sobrenome: </label>
+                <input type="text" id="sobrenome"
+                required
+                placeholder="Digite seu sobrenome">
+            </p>
+            
+            <!-- Email -->
+            <p><label for="email">Email: </label>
+                <input type="email" id="email"
+                required
+                placeholder="Digite seu email">
+            </p>
+            <!-- Telefone -->
+            <p><label for="tel">Telefone: </label>
+                <input type="tel" id="tel"
+                pattern="^\d{4,5}-[0-9]{4}$"
+                required
+                placeholder="XXXXX-XXXX">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <!-- CEP -->
+            <p><label for="cep">CEP: </label>
+                <input type="text" id="cep"
+                required
+                placeholder="Coloque o CEP">
+            </p>
+            <!-- Logradouro -->
+            <p><label for="endereco">Endereço: </label>
+                <input type="text" id="endereco"
+                required
+                placeholder="Coloque seu endereço">
+            </p>
+            <!-- Bairro -->
+            <p><label for="bairro">Bairro: </label>
+                <input type="text" id="bairro"
+                required
+                placeholder="Digite o seu bairro">
+            </p>
+            <!-- Complemento -->
+            <p><label for="complemento">Complemento: </label>
+                <input type="text" id="complemento"
+                placeholder="Ex. casa 6, bloco A...">
+            </p>
+            <!-- Cidade -->
+            </p><label for="cidade">Cidade: </label>
+                <input type="text" id="cidade"
+                required
+                placeholder="Adicione sua cidade">
+            </p>
+            <!-- Estado -->
+            <p><label for="estado">Estado: </label>
+                <input type="text" id="estado"
+                required
+                placeholder="Adicione seu estado">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+</body>
